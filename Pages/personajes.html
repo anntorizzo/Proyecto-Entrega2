@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personajes de Harry Potter</title>
+
+  
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<!-- Google Fonts: Cinzel -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Hogwarts</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPersonajes" aria-controls="menuPersonajes" aria-expanded="false" aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPersonajes">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="casas.html">Casas</a></li>
+            <li class="nav-item"><a class="nav-link active" href="personajes.html" aria-current="page">Personajes</a></li>
+            <li class="nav-item"><a class="nav-link" href="hechizos.html">Hechizos</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="container my-5">
+    <h1 class="text-center mb-4">Personajes principales</h1>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 personajes__carta">
+          <img src="../img/harry.jpg" class="card-img-top" alt="Harry Potter">
+          <div class="card-body">
+            <h5 class="card-title">Harry Potter</h5>
+            <p class="card-text">El niño que vivió. Héroe de la saga, valiente y noble.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 personajes__carta">
+          <img src="../img/hermione.jpg" class="card-img-top" alt="Hermione Granger">
+          <div class="card-body">
+            <h5 class="card-title">Hermione Granger</h5>
+            <p class="card-text">La más brillante de su curso, siempre fiel a sus amigos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 personajes__carta">
+          <img src="../img/ron.jpg" class="card-img-top" alt="Ron Weasley">
+          <div class="card-body">
+            <h5 class="card-title">Ron Weasley</h5>
+            <p class="card-text">Leal y valiente. Parte del trío dorado y gran amigo de Harry.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>© 2025 Hogwarts Escuela de Magia y Hechicería</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casas de Hogwarts</title>
+
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+
+  <!-- Google Fonts: Cinzel -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Menú principal">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Hogwarts</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuCasas" aria-controls="menuCasas" aria-expanded="false" aria-label="Mostrar menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuCasas">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="casas.html">Casas</a></li>
+            <li class="nav-item"><a class="nav-link" href="personajes.html">Personajes</a></li>
+            <li class="nav-item"><a class="nav-link" href="hechizos.html">Hechizos</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO DE CASAS -->
+  <main class="container my-5">
+    <h1 class="text-center mb-4">Casas de Hogwarts</h1>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 casas__carta">
+          <img src="../img/gryffindor.jpg" class="card-img-top" alt="Escudo de Gryffindor">
+          <div class="card-body">
+            <h5 class="card-title">Gryffindor</h5>
+            <p class="card-text">Valor, coraje y determinación. Fundada por Godric Gryffindor.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 casas__carta">
+          <img src="../img/slytherin.jpg" class="card-img-top" alt="Escudo de Slytherin">
+          <div class="card-body">
+            <h5 class="card-title">Slytherin</h5>
+            <p class="card-text">Ambición, astucia y liderazgo. Fundada por Salazar Slytherin.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 casas__carta">
+          <img src="../img/ravenclaw.jpg" class="card-img-top" alt="Escudo de Ravenclaw">
+          <div class="card-body">
+            <h5 class="card-title">Ravenclaw</h5>
+            <p class="card-text">Sabiduría, creatividad e inteligencia. Fundada por Rowena Ravenclaw.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 casas__carta">
+          <img src="../img/hufflepuff.jpg" class="card-img-top" alt="Escudo de Hufflepuff">
+          <div class="card-body">
+            <h5 class="card-title">Hufflepuff</h5>
+            <p class="card-text">Lealtad, honestidad y trabajo duro. Fundada por Helga Hufflepuff.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>© 2025 Hogwarts Escuela de Magia y Hechicería</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
