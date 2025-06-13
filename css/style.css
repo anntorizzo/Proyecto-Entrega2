@@ -25,11 +25,10 @@
 /* -------------------------- */
 /* ESTILO GENERAL DEL SITIO */
 /* -------------------------- */
-
 body {
   font-family: 'Cinzel', Georgia, serif;
-  background-color: #f5f0e1;
-  color: #2e2e2e;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
   margin: 0;
   padding: 0;
   position: relative;
@@ -42,15 +41,9 @@ body {
 }
 
 @keyframes sparkle {
-  0% {
-    background-position: 0 0, 25px 25px;
-  }
-  50% {
-    background-position: 25px 25px, 0 0;
-  }
-  100% {
-    background-position: 0 0, 25px 25px;
-  }
+  0% { background-position: 0 0, 25px 25px; }
+  50% { background-position: 25px 25px, 0 0; }
+  100% { background-position: 0 0, 25px 25px; }
 }
 
 h1, h2, h3, h4 {
@@ -61,14 +54,12 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
-  image-rendering: auto;
   display: block;
 }
 
 /* -------------------------- */
 /* NAVBAR PERSONALIZADA */
 /* -------------------------- */
-
 .navbar {
   border-bottom: 3px solid var(--color-oro);
 }
@@ -85,20 +76,19 @@ img {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #ffd700 !important;
-  text-shadow: 0 0 8px #ffd700;
+  color: var(--color-oro) !important;
+  text-shadow: 0 0 8px var(--color-oro);
 }
 
 .nav-link.active {
-  color: #ffd700 !important;
+  color: var(--color-oro) !important;
   font-weight: 700;
-  text-shadow: 0 0 10px #ffd700, 0 0 20px #fffacd;
+  text-shadow: 0 0 10px var(--color-oro), 0 0 20px #fffacd;
 }
 
 /* -------------------------- */
 /* FOOTER */
 /* -------------------------- */
-
 footer {
   margin-top: 50px;
   padding: 10px 0;
@@ -110,12 +100,10 @@ footer {
 /* -------------------------- */
 /* HOME / INDEX */
 /* -------------------------- */
-
 main section {
   margin-bottom: 60px;
 }
 
-/* Cards mágicas en index */
 .card {
   border: 1px solid var(--color-borde-carta);
   transition: transform 0.2s ease-in-out;
@@ -133,15 +121,12 @@ main section {
   color: var(--color-rojo-titulo-card);
 }
 
-/* Alinea texto abajo en las cards */
 .card-body {
   margin-top: auto;
 }
 
 /* -------------------------- */
 /* SECCIÓN CASAS */
-/* -------------------------- */
-
 .casas__carta img {
   height: 300px;
   object-fit: cover;
@@ -156,8 +141,6 @@ main section {
 
 /* -------------------------- */
 /* SECCIÓN PERSONAJES */
-/* -------------------------- */
-
 .personajes__carta img {
   height: 300px;
   object-fit: cover;
@@ -167,8 +150,6 @@ main section {
 
 /* -------------------------- */
 /* FORMULARIO CONTACTO */
-/* -------------------------- */
-
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -185,8 +166,8 @@ form {
 .form-floating input,
 .form-floating textarea {
   background-color: #fff;
-  color: #2e2e2e;
-  border: 1px solid #ccc;
+  color: var(--color-input-texto);
+  border: 1px solid var(--color-input-borde);
   border-radius: 0.375rem;
   padding: 1rem 0.75rem 0.25rem 0.75rem;
   font-size: 1rem;
@@ -195,27 +176,27 @@ form {
 
 .form-floating input::placeholder,
 .form-floating textarea::placeholder {
-  color: #777;
+  color: var(--color-input-placeholder);
   opacity: 1;
 }
 
 .form-floating input:focus,
 .form-floating textarea:focus {
   outline: none;
-  border-color: #ffd700;
+  border-color: var(--color-input-focus-borde);
   box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.4);
 }
 
 .form-floating label {
-  color: #2e2e2e;
+  color: var(--color-texto);
 }
 
 button.btn-dark {
-  background-color: #3c2a1e;         /* marrón oscuro */
-  border: 2px solid #ffd700;         /* borde dorado */
-  color: #ffd700;                    /* texto dorado */
+  background-color: var(--color-titulos);
+  border: 2px solid var(--color-oro);
+  color: var(--color-oro);
   transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 10px #ffd700;     /* sombra dorada suave */
+  box-shadow: 0 0 10px var(--color-oro);
   padding: 0.6rem 1.5rem;
   font-size: 1.1rem;
   border-radius: 0.375rem;
@@ -225,10 +206,10 @@ button.btn-dark {
 }
 
 button.btn-dark:hover {
-  background-color: #ffd700;         /* fondo dorado al pasar el mouse */
-  color: #3c2a1e;                    /* texto marrón oscuro */
-  transform: scale(1.1);             /* agranda un 10% */
-  box-shadow: 0 0 20px #ffd700, 0 0 40px #fff700;  /* sombra dorada más intensa */
+  background-color: var(--color-oro);
+  color: var(--color-titulos);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--color-oro), 0 0 40px #fff700;
 }
 
 button.btn-dark:active {
@@ -238,8 +219,6 @@ button.btn-dark:active {
 
 /* -------------------------- */
 /* MEDIA QUERIES */
-/* -------------------------- */
-
 @media (max-width: 992px) {
   .navbar-brand {
     font-size: 1.3rem;
@@ -270,7 +249,6 @@ button.btn-dark:active {
     padding: 8px 0 !important;
   }
 
-  /* Cards en pantallas chicas */
   .card {
     height: auto;
   }
@@ -301,7 +279,6 @@ button.btn-dark:active {
 
 /* -------------------------- */
 /* MAGIC STARS BACKGROUND */
-/* -------------------------- */
 .magic-stars {
   position: fixed;
   top: 0;
@@ -324,4 +301,30 @@ button.btn-dark:active {
     radial-gradient(circle 1.5px, #f8e473 100%, transparent 100%) 70% 30% / 30px 30px repeat,
     radial-gradient(circle 1.5px, #fffacd 100%, transparent 100%) 85% 80% / 22px 22px repeat;
   animation: twinkle 6s linear infinite;
-  opacity: 0.
+  opacity: 0.3;
+}
+
+/* -------------------------- */
+/* HERO SECTION CON FONDO DE HOGWARTS */
+.hero-hogwarts {
+  background-image: url('../img/hogwarts-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+  z-index: 1;
+  
+}
+
+}
+
+.hero-hogwarts h1,
+.hero-hogwarts p {
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-hogwarts h1,
+.hero-hogwarts p {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8); /* para mayor contraste */
+}

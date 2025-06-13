@@ -7,7 +7,6 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
 
   <!-- Google Fonts: Cinzel -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
@@ -28,7 +27,7 @@
 
         <div class="collapse navbar-collapse" id="menuHogwarts">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/casas.html">Casas</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/personajes.html">Personajes</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/hechizos.html">Hechizos</a></li>
@@ -39,65 +38,65 @@
     </nav>
   </header>
 
-  <!-- Fondo estrellado mágico -->
+  <!-- FONDO MÁGICO -->
   <div class="magic-stars"></div>
 
-  <!-- TÍTULO INICIAL -->
-  <section class="container my-5">
-    <h2 class="text-center mb-4">Explorá el mundo mágico</h2>
+  <!-- HERO CON IMAGEN DE FONDO -->
+  <section class="hero-hogwarts d-flex align-items-center text-white">
+    <div class="container text-center py-5">
+      <h1 class="display-4">Bienvenidos a Hogwarts</h1>
+      <p class="lead">Descubrí las casas, personajes y hechizos de la escuela más mágica del mundo.</p>
+      <a href="pages/casas.html" class="btn btn-dark mt-3">Explorar el sitio</a>
+    </div>
   </section>
 
-  <!-- HERO SECTION con Vanta -->
-  <main class="container my-5 position-relative">
-    <div id="vanta-bg" style="position:absolute; top:0; left:0; width:100%; height:400px; z-index:0;"></div>
-    <section class="row align-items-center position-relative" style="z-index:1;">
-      <div class="col-md-6">
-        <h1>Bienvenidos a Hogwarts</h1>
-        <p>La escuela de magia más famosa del mundo. Descubrí las casas, personajes y hechizos que forman parte del universo mágico.</p>
-      </div>
-      <div class="col-md-6">
-        <img src="img/hogwarts.jpg" class="img-fluid" alt="Castillo de Hogwarts" style="border-radius:8px;">
-      </div>
+  <!-- SECCIÓN DE PRESENTACIÓN -->
+  <section class="container my-5 text-center">
+    <h2 class="mb-3">Explorá el mundo mágico</h2>
+    <p>Ingresá a la escuela de magia y hechicería más famosa del mundo y conocé sus rincones encantados. Hogwarts es mucho más que un castillo: es historia, misterio y magia en cada rincón.</p>
+  </section>
+
+  <!-- SECCIÓN DE CARDS DESTACADAS -->
+  <main class="container my-5">
+    <section class="text-center mb-5">
+      <h2>Secciones destacadas</h2>
+      <p>Accedé rápidamente a los apartados principales del sitio para descubrir más sobre el universo mágico.</p>
     </section>
 
-    <!-- SECCIÓN DE CARDS -->
-    <section class="my-5">
-      <h2 class="text-center mb-4">Secciones destacadas</h2>
-      <div class="row g-4">
-        <div class="col-sm-6 col-lg-4 d-flex">
-          <div class="card h-100 d-flex flex-column">
-            <img src="img/gryffindor.jpg" class="card-img-top" alt="Casa Gryffindor" style="height: 300px; object-fit: cover;">
-            <div class="card-body mt-auto">
-              <h5 class="card-title">Casas</h5>
-              <p class="card-text">Conocé a Gryffindor, Slytherin, Hufflepuff y Ravenclaw.</p>
-              <a href="pages/casas.html" class="btn btn-dark">Ver más</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-lg-4 d-flex">
-          <div class="card h-100 d-flex flex-column">
-            <img src="img/harry.jpg" class="card-img-top" alt="Harry Potter" style="height: 300px; object-fit: cover;">
-            <div class="card-body mt-auto">
-              <h5 class="card-title">Personajes</h5>
-              <p class="card-text">Descubrí a los personajes más importantes de la saga.</p>
-              <a href="pages/personajes.html" class="btn btn-dark">Ver más</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-lg-4 d-flex">
-          <div class="card h-100 d-flex flex-column">
-            <img src="img/varita.jpg" class="card-img-top" alt="Varita mágica" style="height: 300px; object-fit: cover;">
-            <div class="card-body mt-auto">
-              <h5 class="card-title">Hechizos</h5>
-              <p class="card-text">Aprendé los hechizos más usados por magos y brujas.</p>
-              <a href="pages/hechizos.html" class="btn btn-dark">Ver más</a>
-            </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4 d-flex">
+        <div class="card h-100 d-flex flex-column">
+          <img src="img/gryffindor 2.jpg" class="card-img-top" alt="Casa Gryffindor" style="height: 300px; object-fit: cover;">
+          <div class="card-body mt-auto">
+            <h5 class="card-title">Casas</h5>
+            <p class="card-text">Conocé a Gryffindor, Slytherin, Hufflepuff y Ravenclaw.</p>
+            <a href="pages/casas.html" class="btn btn-dark">Ver más</a>
           </div>
         </div>
       </div>
-    </section>
+
+      <div class="col-sm-6 col-lg-4 d-flex">
+        <div class="card h-100 d-flex flex-column">
+          <img src="img/harry2.jpg" class="card-img-top" alt="Harry Potter" style="height: 300px; object-fit: cover;">
+          <div class="card-body mt-auto">
+            <h5 class="card-title">Personajes</h5>
+            <p class="card-text">Descubrí a los personajes más importantes de la saga.</p>
+            <a href="pages/personajes.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4 d-flex">
+        <div class="card h-100 d-flex flex-column">
+          <img src="img/varita2.jpg" class="card-img-top" alt="Varita mágica" style="height: 300px; object-fit: cover;">
+          <div class="card-body mt-auto">
+            <h5 class="card-title">Hechizos</h5>
+            <p class="card-text">Aprendé los hechizos más usados por magos y brujas.</p>
+            <a href="pages/hechizos.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- FOOTER -->
@@ -107,23 +106,5 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    VANTA.WAVES({
-      el: "#vanta-bg",
-      mouseControls: true,
-      touchControls: true,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x1a1a1a,
-      shininess: 50.00,
-      waveHeight: 10.00,
-      waveSpeed: 0.5,
-      zoom: 0.8
-    });
-  </script>
-
 </body>
 </html>
