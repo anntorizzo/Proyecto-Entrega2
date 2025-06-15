@@ -1,0 +1,18 @@
+@use './variables';
+@use './mixins';
+@use './base';
+@use './layout';
+@use './components';
+@use './mediaqueries';
+
+
+body {
+  background-color: variables.$color-fondo;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}

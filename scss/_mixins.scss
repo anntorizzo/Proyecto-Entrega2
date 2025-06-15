@@ -1,0 +1,27 @@
+@use './variables' as variables;
+
+@mixin boton-magico {
+  background-color: variables.$color-titulos;
+  border: 2px solid variables.$color-oro;
+  color: variables.$color-oro;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px variables.$color-oro;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: block;
+  margin: 1.5rem auto 0;
+
+  &:hover {
+    background-color: variables.$color-oro;
+    color: variables.$color-titulos;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px variables.$color-oro, 0 0 40px #fff700;
+  }
+
+  &:active {
+    background-color: #b38f00;
+    color: #fff;
+  }
+}

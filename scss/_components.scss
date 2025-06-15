@@ -1,0 +1,41 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+/* -------------------------- */
+/* COMPONENTES: TARJETAS */
+/* -------------------------- */
+
+@mixin card-base {
+  border: 1px solid v.$color-borde-carta;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card-base {
+  @include card-base;
+}
+
+.card-gryffindor {
+  @include card-base;
+  border-color: #ae0001;
+}
+
+.card-hufflepuff {
+  @include card-base;
+  border-color: #f0c75e;
+}
+
+/* -------------------------- */
+/* COMPONENTES: BOTONES */
+/* -------------------------- */
+
+.btn-magico {
+  @include m.boton-magico;
+}
