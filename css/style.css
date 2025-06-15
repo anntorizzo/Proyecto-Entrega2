@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Cinzel", Georgia, serif;
   background-color: #f5f0e1;
@@ -60,11 +61,59 @@ h1, h2, h3, h4 {
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .card-base:hover {
   transform: scale(1.05);
 }
 
+/* Ajuste imágenes para casas: mostrar imagen completa, enfocada arriba */
+.casas__carta,
+.personajes__carta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.casas__carta img {
+  height: 200px;
+  object-fit: contain;
+  object-position: top center;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Ajuste imágenes para personajes */
+.personajes__carta img {
+  height: 230px; /* Aumenté altura */
+  object-fit: cover;
+  object-position: center top; /* Muestra la parte superior de la imagen */
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Ajustes individuales */
+.hermione-img {
+  object-position: top center;
+}
+
+.ron-img {
+  object-position: top center;
+}
+
+/* -------------------------- */
+/* COMPONENTES: BORDES POR CASA */
+/* -------------------------- */
 .card-gryffindor {
   border: 1px solid #d0c4a5;
   border-radius: 12px;
@@ -72,6 +121,10 @@ h1, h2, h3, h4 {
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   border-color: #ae0001;
 }
 .card-gryffindor:hover {
@@ -85,6 +138,10 @@ h1, h2, h3, h4 {
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   border-color: #f0c75e;
 }
 .card-hufflepuff:hover {
@@ -116,6 +173,15 @@ h1, h2, h3, h4 {
 .btn-magico:active {
   background-color: #b38f00;
   color: #fff;
+}
+
+/* Ajustes personalizados para Hermione y Ron */
+.hermione-img {
+  object-position: top !important;
+}
+
+.ron-img {
+  object-position: 0 -20px !important;
 }
 
 @media (max-width: 768px) {

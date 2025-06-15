@@ -13,6 +13,11 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
   &:hover {
     transform: scale(1.05);
   }
@@ -21,6 +26,52 @@
 .card-base {
   @include card-base;
 }
+
+/* Ajuste imágenes para casas: mostrar imagen completa, enfocada arriba */
+.casas__carta,
+.personajes__carta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.casas__carta img {
+  height: 200px;
+  object-fit: contain;
+  object-position: top center;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Ajuste imágenes para personajes */
+.personajes__carta img {
+  height: 230px; /* Aumenté altura */
+  object-fit: cover;
+  object-position: center top; /* Muestra la parte superior de la imagen */
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+
+/* Ajustes individuales */
+.hermione-img {
+  object-position: top center; // sube un poquito para que no se le corte la frente
+}
+
+.ron-img {
+  object-position: top center; // sube más para que no se le corte la cara desde los ojos
+}
+
+/* -------------------------- */
+/* COMPONENTES: BORDES POR CASA */
+/* -------------------------- */
 
 .card-gryffindor {
   @include card-base;
@@ -38,4 +89,12 @@
 
 .btn-magico {
   @include m.boton-magico;
+}
+/* Ajustes personalizados para Hermione y Ron */
+.hermione-img {
+  object-position: top !important;
+}
+
+.ron-img {
+  object-position: 0 -20px !important;
 }
