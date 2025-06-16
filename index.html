@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hogwarts Escuela de Magia y Hechicería</title>
 
   <!-- Bootstrap CSS -->
@@ -18,10 +18,10 @@
 
   <!-- NAVBAR -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
       <div class="container">
         <a class="navbar-brand" href="#">Hogwarts</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuHogwarts">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuHogwarts" aria-controls="menuHogwarts" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -44,58 +44,58 @@
   <!-- HERO CON IMAGEN DE FONDO -->
   <section class="hero-hogwarts d-flex align-items-center text-white">
     <div class="container text-center py-5">
-      <h1 class="display-4">Bienvenidos a Hogwarts</h1>
-      <p class="lead">Descubrí las casas, personajes y hechizos de la escuela más mágica del mundo.</p>
-      <a href="pages/casas.html" class="btn btn-dark mt-3">Explorar el sitio</a>
+      <h1 class="display-4 hero-title">Bienvenidos a Hogwarts</h1>
+      <p class="lead hero-subtitle">Descubrí las casas, personajes y hechizos de la escuela más mágica del mundo.</p>
+      <a href="pages/casas.html" class="btn btn-dark btn-magic mt-3">Explorar el sitio</a>
     </div>
   </section>
 
   <!-- SECCIÓN DE PRESENTACIÓN -->
   <section class="container my-5 text-center">
-    <h2 class="mb-3">Explorá el mundo mágico</h2>
-    <p>Ingresá a la escuela de magia y hechicería más famosa del mundo y conocé sus rincones encantados. Hogwarts es mucho más que un castillo: es historia, misterio y magia en cada rincón.</p>
+    <h2 class="section-title mb-3">Explorá el mundo mágico</h2>
+    <p class="section-text">Ingresá a la escuela de magia y hechicería más famosa del mundo y conocé sus rincones encantados. Hogwarts es mucho más que un castillo: es historia, misterio y magia en cada rincón.</p>
   </section>
 
   <!-- SECCIÓN DE CARDS DESTACADAS -->
   <main class="container my-5">
     <section class="text-center mb-5">
-      <h2>Secciones destacadas</h2>
-      <p>Accedé rápidamente a los apartados principales del sitio para descubrir más sobre el universo mágico.</p>
+      <h2 class="section-title">Secciones destacadas</h2>
+      <p class="section-text">Accedé rápidamente a los apartados principales del sitio para descubrir más sobre el universo mágico.</p>
     </section>
 
     <div class="row g-4">
-      <div class="col-sm-6 col-lg-4 d-flex">
-        <div class="card h-100 d-flex flex-column">
-          <img src="img/gryffindor2.jpg" class="card-img-top" alt="Casa Gryffindor" style="height: 300px; object-fit: cover;">
+      <article class="col-sm-6 col-lg-4 d-flex">
+        <div class="card card-magia">
+          <img src="img/gryffindor2.jpg" class="card-img-top" alt="Casa Gryffindor" />
           <div class="card-body mt-auto">
-            <h5 class="card-title">Casas</h5>
+            <h3 class="card-title">Casas</h3>
             <p class="card-text">Conocé a Gryffindor, Slytherin, Hufflepuff y Ravenclaw.</p>
-            <a href="pages/casas.html" class="btn btn-dark">Ver más</a>
+            <a href="pages/casas.html" class="btn btn-dark btn-magic">Ver más</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="col-sm-6 col-lg-4 d-flex">
-        <div class="card h-100 d-flex flex-column">
-          <img src="img/harry2.jpg" class="card-img-top" alt="Harry Potter" style="height: 300px; object-fit: cover;">
+      <article class="col-sm-6 col-lg-4 d-flex">
+        <div class="card card-magia">
+          <img src="img/harry2.jpg" class="card-img-top" alt="Harry Potter" />
           <div class="card-body mt-auto">
-            <h5 class="card-title">Personajes</h5>
+            <h3 class="card-title">Personajes</h3>
             <p class="card-text">Descubrí a los personajes más importantes de la saga.</p>
-            <a href="pages/personajes.html" class="btn btn-dark">Ver más</a>
+            <a href="pages/personajes.html" class="btn btn-dark btn-magic">Ver más</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="col-sm-6 col-lg-4 d-flex">
-        <div class="card h-100 d-flex flex-column">
-          <img src="img/varita2.jpg" class="card-img-top" alt="Varita mágica" style="height: 300px; object-fit: cover;">
+      <article class="col-sm-6 col-lg-4 d-flex">
+        <div class="card card-magia">
+          <img src="img/varita2.jpg" class="card-img-top" alt="Varita mágica" />
           <div class="card-body mt-auto">
-            <h5 class="card-title">Hechizos</h5>
+            <h3 class="card-title">Hechizos</h3>
             <p class="card-text">Aprendé los hechizos más usados por magos y brujas.</p>
-            <a href="pages/hechizos.html" class="btn btn-dark">Ver más</a>
+            <a href="pages/hechizos.html" class="btn btn-dark btn-magic">Ver más</a>
           </div>
         </div>
-      </div>
+      </article>
     </div>
   </main>
 

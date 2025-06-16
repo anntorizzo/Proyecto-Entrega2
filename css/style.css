@@ -1,4 +1,21 @@
 @charset "UTF-8";
+@keyframes magic-stars {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(30px, 20px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Cinzel", Georgia, serif;
   background-color: #f5f0e1;
@@ -6,7 +23,6 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  overflow-x: hidden;
   background-image: radial-gradient(circle, rgba(255, 215, 0, 0.2) 1px, transparent 1px), radial-gradient(circle, rgba(255, 215, 0, 0.15) 1px, transparent 1px);
   background-position: 0 0, 25px 25px;
   background-size: 50px 50px;
@@ -70,7 +86,7 @@ h1, h2, h3, h4 {
   transform: scale(1.05);
 }
 
-/* Ajuste imágenes para casas: mostrar imagen completa, enfocada arriba */
+/* Ajuste imágenes para casas */
 .casas__carta,
 .personajes__carta {
   display: flex;
@@ -92,9 +108,9 @@ h1, h2, h3, h4 {
 
 /* Ajuste imágenes para personajes */
 .personajes__carta img {
-  height: 230px; /* Aumenté altura */
+  height: 230px;
   object-fit: cover;
-  object-position: center top; /* Muestra la parte superior de la imagen */
+  object-position: center top;
   border-radius: 8px 8px 0 0;
   width: 100%;
   display: block;
@@ -155,14 +171,14 @@ h1, h2, h3, h4 {
   background-color: #3c2a1e;
   border: 2px solid #ffd700;
   color: #ffd700;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px #ffd700;
-  padding: 0.6rem 1.5rem;
-  font-size: 1.1rem;
-  border-radius: 0.375rem;
   cursor: pointer;
   display: block;
   margin: 1.5rem auto 0;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 0 10px #ffd700;
+  transition: all 0.3s ease;
 }
 .btn-magico:hover {
   background-color: #ffd700;
@@ -184,6 +200,106 @@ h1, h2, h3, h4 {
   object-position: 0 -20px !important;
 }
 
+.card-magia {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  border: 1px solid #d4af37;
+}
+.card-magia .card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+.card-magia .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-magia .btn {
+  background-color: #3c2a1e;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  cursor: pointer;
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 0 10px #ffd700;
+  transition: all 0.3s ease;
+}
+.card-magia .btn:hover {
+  background-color: #ffd700;
+  color: #3c2a1e;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ffd700, 0 0 40px #fff700;
+}
+.card-magia .btn:active {
+  background-color: #b38f00;
+  color: #fff;
+}
+
+/* -------------------------- */
+/* COMPONENTES: COLORES DE CASAS */
+/* -------------------------- */
+.casa-1 {
+  background-color: #7f0909;
+  color: white;
+  border: 2px solid rgb(55.5625, 3.9375, 3.9375);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.casa-1:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.casa-2 {
+  background-color: #0d6217;
+  color: white;
+  border: 2px solid rgb(4.0405405405, 30.4594594595, 7.1486486486);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.casa-2:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.casa-3 {
+  background-color: #000a90;
+  color: white;
+  border: 2px solid rgb(0, 4.6875, 67.5);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.casa-3:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.casa-4 {
+  background-color: #ecb939;
+  color: white;
+  border: 2px solid rgb(197.5437788018, 146.6612903226, 18.9562211982);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.casa-4:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
 @media (max-width: 768px) {
   .main-container {
     grid-template-columns: 1fr;
@@ -192,12 +308,32 @@ h1, h2, h3, h4 {
 body {
   background-color: #f5f0e1;
   font-family: Arial, sans-serif;
+  background: radial-gradient(ellipse at center, #0a0a0a 0%, #121212 70%);
+  position: relative;
+  overflow: hidden;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 20%, #fff700, transparent 30%), radial-gradient(circle at 80% 80%, #00ffff, transparent 30%);
+  animation: magic-stars 20s linear infinite;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
 }
 
 h1 {
   color: white;
   text-align: center;
   margin-top: 50px;
+  transition: color 0.3s ease;
+}
+h1:hover {
+  color: #ffd700;
+  transform: scale(1.05);
 }
 
-/*# sourceMappingURL=style.css.map */

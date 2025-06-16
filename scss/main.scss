@@ -1,18 +1,27 @@
-@use './variables';
-@use './mixins';
+@use './variables' as vars;
+@use './mixins' as mixins;
 @use './base';
 @use './layout';
 @use './components';
 @use './mediaqueries';
 
-
 body {
-  background-color: variables.$color-fondo;
+  background-color: vars.$color-fondo;
   font-family: Arial, sans-serif;
+
+  @include mixins.magic-background();
 }
 
 h1 {
   color: white;
   text-align: center;
   margin-top: 50px;
+
+  @include mixins.smooth-transition(color);
+
+  &:hover {
+    color: vars.$color-oro;
+    transform: scale(1.05);
+  }
 }
+

@@ -1,5 +1,11 @@
 @use './variables' as v;
 
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Cinzel', Georgia, serif;
   background-color: v.$color-fondo;
@@ -7,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  overflow-x: hidden;
+
   background-image: 
     radial-gradient(circle, rgba(255,215,0,0.2) 1px, transparent 1px),
     radial-gradient(circle, rgba(255,215,0,0.15) 1px, transparent 1px);

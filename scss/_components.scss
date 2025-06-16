@@ -27,7 +27,7 @@
   @include card-base;
 }
 
-/* Ajuste imágenes para casas: mostrar imagen completa, enfocada arriba */
+/* Ajuste imágenes para casas */
 .casas__carta,
 .personajes__carta {
   display: flex;
@@ -49,9 +49,9 @@
 
 /* Ajuste imágenes para personajes */
 .personajes__carta img {
-  height: 230px; /* Aumenté altura */
+  height: 230px;
   object-fit: cover;
-  object-position: center top; /* Muestra la parte superior de la imagen */
+  object-position: center top;
   border-radius: 8px 8px 0 0;
   width: 100%;
   display: block;
@@ -59,14 +59,13 @@
   margin-bottom: 1rem;
 }
 
-
 /* Ajustes individuales */
 .hermione-img {
-  object-position: top center; // sube un poquito para que no se le corte la frente
+  object-position: top center;
 }
 
 .ron-img {
-  object-position: top center; // sube más para que no se le corte la cara desde los ojos
+  object-position: top center;
 }
 
 /* -------------------------- */
@@ -90,6 +89,7 @@
 .btn-magico {
   @include m.boton-magico;
 }
+
 /* Ajustes personalizados para Hermione y Ron */
 .hermione-img {
   object-position: top !important;
@@ -97,4 +97,49 @@
 
 .ron-img {
   object-position: 0 -20px !important;
+}
+
+.card-magia {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  border: 1px solid #d4af37;
+
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .btn {
+    @include m.boton-magico();
+  }
+}
+
+/* -------------------------- */
+/* COMPONENTES: COLORES DE CASAS */
+/* -------------------------- */
+
+@for $i from 1 through 4 {
+  .casa-#{$i} {
+    background-color: nth(v.$colores-casas, $i);
+    color: white;
+    border: 2px solid darken(nth(v.$colores-casas, $i), 15%);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+    }
+  }
 }
